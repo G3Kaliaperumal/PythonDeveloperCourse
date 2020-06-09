@@ -12,11 +12,10 @@ picture = [
 ]
 
 for tempList in picture:
-  newstr = ''
   for item in tempList:
     if item == 0:
-      newstr += ' '
+      print(' ', end='')
     elif item == 1:
-      newstr += '*'
-  print(newstr)
+      print('*', end='')
+  print()
   
