@@ -5,4 +5,5 @@ def highesteven(given_list):
             evenNumbers.append(number)
     return max(evenNumbers)
 
-print(highesteven([20,45,68,97]))
+
+print(highesteven([20, 45, 68, 97]))
