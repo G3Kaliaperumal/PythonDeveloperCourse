@@ -1,0 +1,258 @@
+<html>
+    <head>
+        <style>
+            #quizmain {
+                font-family: "Segoe UI",Arial,sans-serif;
+                font-size: 18px;
+                width: 100%;
+                background-color: #fff;
+            }
+            .radiocontainer {
+                background-color: #f1f1f1;
+                position: relative;
+                padding: 10px 10px 10px 40px;
+                margin-bottom: 1px;
+                font-size: 18px;
+                word-wrap: break-word;
+            }
+            .radiocontainer.correct.selected {
+                background-color: #d4edda;
+            }
+            .answercomment {
+                background-color: rgba(0, 0, 0, 0.2);
+                color: white;
+                white-space: nowrap;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+            h3 {
+                font-family: "Segoe UI",Arial,sans-serif;
+                font-weight: 400;
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="quizmain">
+            <h1>Python Quiz Results</h1>
+            <p>Score: 25 of 25</p>
+            <h3>100% Correct:</h3>
+            <hr>
+            <h3>Question 1:</h3>
+            <p>What is a correct syntax to output "Hello World" in Python?</p>
+            <div class="radiocontainer correct selected" id="label1" style="padding-right:135px">
+            print("Hello World")&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label3">p("Hello World")</div>
+            <div class="radiocontainer" id="label4">echo("Hello World");</div>
+            <div class="radiocontainer" id="label2">echo "Hello World"</div>
+            <hr>
+            <h3>Question 2:</h3>
+            <p>How do you insert COMMENTS in Python code?</p>
+            <div class="radiocontainer correct selected" id="label2" style="padding-right:135px">
+            #This is a comment&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label1">//This is a comment</div>
+            <div class="radiocontainer" id="label3">/*This is a comment*/</div>
+            <hr>
+            <h3>Question 3:</h3>
+            <p>Which one is NOT a legal variable name?</p>
+            <div class="radiocontainer correct selected" id="label4" style="padding-right:135px">
+            my-var&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label3">my_var</div>
+            <div class="radiocontainer" id="label2">Myvar</div>
+            <div class="radiocontainer" id="label1">_myvar</div>
+            <hr>
+            <h3>Question 4:</h3>
+            <p>How do you create a variable with the numeric value 5?</p>
+            <div class="radiocontainer correct selected" id="label2" style="padding-right:135px">
+            Both the other answers are correct&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label3">x = int(5)</div>
+            <div class="radiocontainer" id="label1">x = 5</div>
+            <hr>
+            <h3>Question 5:</h3>
+            <p>What is the correct file extension for Python files?</p>
+            <div class="radiocontainer correct selected" id="label2" style="padding-right:135px">
+            .py&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label4">.pt</div>
+            <div class="radiocontainer" id="label1">.pyt</div>
+            <div class="radiocontainer" id="label3">.pyth</div>
+            <hr>
+            <h3>Question 6:</h3>
+            <p>How do you create a variable with the floating number 2.8?</p>
+            <div class="radiocontainer correct selected" id="label2" style="padding-right:135px">
+            Both the other answers are correct&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label1">x = 2.8</div>
+            <div class="radiocontainer" id="label3">x = float(2.8)</div>
+            <hr>
+            <h3>Question 7:</h3>
+            <p>What is the correct syntax to output the type of a variable or object in Python?</p>
+            <div class="radiocontainer correct selected" id="label3" style="padding-right:135px">
+            print(type(x))&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label1">print(typeof(x))</div>
+            <div class="radiocontainer" id="label4">print(typeof x)</div>
+            <div class="radiocontainer" id="label2">print(typeOf(x))</div>
+            <hr>
+            <h3>Question 8:</h3>
+            <p>What is the correct way to create a function in Python?</p>
+            <div class="radiocontainer correct selected" id="label2" style="padding-right:135px">
+            def myFunction():&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label3">function myfunction():</div>
+            <div class="radiocontainer" id="label1">create myFunction():</div>
+            <hr>
+            <h3>Question 9:</h3>
+            <p>In Python, 'Hello', is the same as "Hello"</p>
+            <div class="radiocontainer correct selected" id="label1" style="padding-right:135px">
+            True&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label2">False</div>
+            <hr>
+            <h3>Question 10:</h3>
+            <p>What is a correct syntax to return the first character in a string?</p>
+            <div class="radiocontainer correct selected" id="label3" style="padding-right:135px">
+            x = "Hello"[0]&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label1">x = "Hello".sub(0, 1)</div>
+            <div class="radiocontainer" id="label2">x = sub("Hello", 0, 1)</div>
+            <hr>
+            <h3>Question 11:</h3>
+            <p>Which method can be used to remove any whitespace from both the beginning and the end of a string?</p>
+            <div class="radiocontainer correct selected" id="label1" style="padding-right:135px">
+            strip()&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label3">ptrim()</div>
+            <div class="radiocontainer" id="label2">trim()</div>
+            <div class="radiocontainer" id="label4">len()</div>
+            <hr>
+            <h3>Question 12:</h3>
+            <p>Which method can be used to return a string in upper case letters?</p>
+            <div class="radiocontainer correct selected" id="label2" style="padding-right:135px">
+            upper()&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label3">uppercase()</div>
+            <div class="radiocontainer" id="label4">toUpperCase()</div>
+            <div class="radiocontainer" id="label1">upperCase()</div>
+            <hr>
+            <h3>Question 13:</h3>
+            <p>Which method can be used to replace parts of a string?</p>
+            <div class="radiocontainer correct selected" id="label1" style="padding-right:135px">
+            replace()&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label3">replaceString()</div>
+            <div class="radiocontainer" id="label2">repl()</div>
+            <div class="radiocontainer" id="label4">switch()</div>
+            <hr>
+            <h3>Question 14:</h3>
+            <p>Which operator is used to multiply numbers?</p>
+            <div class="radiocontainer correct selected" id="label2" style="padding-right:135px">
+            *&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label4">#</div>
+            <div class="radiocontainer" id="label1">x</div>
+            <div class="radiocontainer" id="label3">%</div>
+            <hr>
+            <h3>Question 15:</h3>
+            <p>Which operator can be used to compare two values?</p>
+            <div class="radiocontainer correct selected" id="label3" style="padding-right:135px">
+            ==&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label4">&gt;&lt;</div>
+            <div class="radiocontainer" id="label2">&lt;&gt;</div>
+            <div class="radiocontainer" id="label1">=</div>
+            <hr>
+            <h3>Question 16:</h3>
+            <p>Which of these collections defines a LIST?</p>
+            <div class="radiocontainer correct selected" id="label4" style="padding-right:135px">
+            ["apple", "banana", "cherry"]&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label2">{"apple", "banana", "cherry"}</div>
+            <div class="radiocontainer" id="label1">{"name": "apple", "color": "green"}</div>
+            <div class="radiocontainer" id="label3">("apple", "banana", "cherry")</div>
+            <hr>
+            <h3>Question 17:</h3>
+            <p>Which of these collections defines a TUPLE?</p>
+            <div class="radiocontainer correct selected" id="label3" style="padding-right:135px">
+            ("apple", "banana", "cherry")&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label2">{"apple", "banana", "cherry"}</div>
+            <div class="radiocontainer" id="label4">["apple", "banana", "cherry"]</div>
+            <div class="radiocontainer" id="label1">{"name": "apple", "color": "green"}</div>
+            <hr>
+            <h3>Question 18:</h3>
+            <p>Which of these collections defines a SET?</p>
+            <div class="radiocontainer correct selected" id="label2" style="padding-right:135px">
+            {"apple", "banana", "cherry"}&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label4">["apple", "banana", "cherry"]</div>
+            <div class="radiocontainer" id="label3">("apple", "banana", "cherry")</div>
+            <div class="radiocontainer" id="label1">{"name": "apple", "color": "green"}</div>
+            <hr>
+            <h3>Question 19:</h3>
+            <p>Which of these collections defines a DICTIONARY?</p>
+            <div class="radiocontainer correct selected" id="label1" style="padding-right:135px">
+            {"name": "apple", "color": "green"}&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label4">["apple", "banana", "cherry"]</div>
+            <div class="radiocontainer" id="label2">{"apple", "banana", "cherry"}</div>
+            <div class="radiocontainer" id="label3">("apple", "banana", "cherry")</div>
+            <hr>
+            <h3>Question 20:</h3>
+            <p>Which collection is ordered, changeable, and allows duplicate members?</p>
+            <div class="radiocontainer correct selected" id="label3" style="padding-right:135px">
+            LIST&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label1">TUPLE</div>
+            <div class="radiocontainer" id="label2">SET</div>
+            <div class="radiocontainer" id="label4">DICTIONARY</div>
+            <hr>
+            <h3>Question 21:</h3>
+            <p>Which collection does not allow duplicate members?</p>
+            <div class="radiocontainer correct selected" id="label1" style="padding-right:135px">
+            SET&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label3">TUPLE</div>
+            <div class="radiocontainer" id="label2">LIST</div>
+            <hr>
+            <h3>Question 22:</h3>
+            <p>How do you start writing an if statement in Python?</p>
+            <div class="radiocontainer correct selected" id="label2" style="padding-right:135px">
+            if x &gt; y:&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label3">if x &gt; y then:</div>
+            <div class="radiocontainer" id="label1">if (x &gt; y)</div>
+            <hr>
+            <h3>Question 23:</h3>
+            <p>How do you start writing a while loop in Python?</p>
+            <div class="radiocontainer correct selected" id="label1" style="padding-right:135px">
+            while x &gt; y:&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label4">while x &gt; y {</div>
+            <div class="radiocontainer" id="label2">while (x &gt; y)</div>
+            <div class="radiocontainer" id="label3">x &gt; y while {</div>
+            <hr>
+            <h3>Question 24:</h3>
+            <p>How do you start writing a for loop in Python?</p>
+            <div class="radiocontainer correct selected" id="label1" style="padding-right:135px">
+            for x in y:&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label2">for x &gt; y:</div>
+            <div class="radiocontainer" id="label3">for each x in y:</div>
+            <hr>
+            <h3>Question 25:</h3>
+            <p>Which statement is used to stop a loop?</p>
+            <div class="radiocontainer correct selected" id="label2" style="padding-right:135px">
+            break&nbsp;&nbsp;<span class="answercomment">&nbsp;&nbsp;Your answer&nbsp;&nbsp;</span>
+            </div>
+            <div class="radiocontainer" id="label3">exit</div>
+            <div class="radiocontainer" id="label1">stop</div>
+            <div class="radiocontainer" id="label4">return</div>
+        </div>
+    </body>
+ </html>
