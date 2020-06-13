@@ -3,6 +3,7 @@ class User:
         print('logged in')
 
 
+# Inheritance
 class Wizard(User):
     def __init__(self, name, power):
         self._name = name
