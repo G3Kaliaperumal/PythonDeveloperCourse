@@ -6,22 +6,14 @@ hundreds = [100, 200, 300, 400, 500]
 
 
 # Map function
-def multiply_by_2(item):
-    return item * 2
-
+print(list(map(lambda item: item * 2, ones)))
 
 # Filter function
-def find_odd_numbers(item):
-    return item % 2 != 0
+print(list(filter(lambda item: item % 2 != 0, ones)))
 
-
-# Reduce function
-def multiplier(result, initial_value):
-    return result * initial_value
-
-
-print(list(map(multiply_by_2, ones)))
-print(list(filter(find_odd_numbers, ones)))
 # Zip function
 print(list(zip(ones, tens, hundreds)))
-print(reduce(multiplier, ones, 1))  # => 1 * 2 * 3 * 4 * 5 = 120
+
+# Reduce function
+# => 1 * 2 * 3 * 4 * 5 = 120
+print(reduce(lambda result, initial_value: result + initial_value, ones, 1))
