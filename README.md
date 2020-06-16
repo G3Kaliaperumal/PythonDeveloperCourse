@@ -4,6 +4,8 @@
 
 **Python Cheat Sheet:** https://zerotomastery.io/courses/python/cheatsheet/?utm_source=udemy&utm_medium=coursecontent
 
+**Link for Python programming exercises:** https://github.com/darkprinx/100-plus-Python-programming-exercises-extended
+
 
 On the command line, in the program file directory, run the following command.
 ```python
