@@ -1,4 +1,6 @@
 from collections import Counter, defaultdict, OrderedDict
+import datetime
+from array import array
 
 sentence = "Hello"
 print(Counter(sentence))
@@ -21,3 +23,9 @@ dict3 = OrderedDict({
     'a': 1
 })
 print(dict2 == dict3)
+
+print(datetime.time(11, 57, 2))
+print(datetime.date.today())
+
+arr = array('i', [1, 2, 3])
+print(arr[0])
