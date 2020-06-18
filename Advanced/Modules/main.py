@@ -1,3 +1,3 @@
-import shopping.shopping_cart as cart
+from shopping.shopping_cart import buy
 
-print(cart.buy('apple'))
+print(buy('apple'))
