@@ -1,4 +1,4 @@
-test_file = open('test.txt')
+test_file = open('files\\test.txt')
 
 # Note that python uses cursor so we can read file only once.
 print(test_file.read())
