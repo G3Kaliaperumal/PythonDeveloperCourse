@@ -13,7 +13,19 @@ class TestMain(unittest.TestCase):
         param1 = 'ABC'
         param2 = 5
         result = add(param1, param2)
-        self.assertTrue(isinstance(result, TypeError))
+        self.assertIsInstance(result, TypeError)
+
+    def test_add3(self):
+        param1 = None
+        param2 = 5
+        result = add(param1, param2)
+        self.assertIsInstance(result, TypeError)
+
+    def test_add4(self):
+        param1 = 5
+        result = add(param1)
+        self.assertEqual(result, 5)
 
 
-unittest.main()
+if __name__ == '__main__':
+    unittest.main()
