@@ -16,4 +16,7 @@ resized_image.save('images\\Resized.png', 'png')
 box = (2433, 2061, 3449, 3061)
 cropped_image = image.crop(box)
 cropped_image.save('images\\Cropped.png', 'png')
-cropped_image.show()
+
+# To maintain aspect ratio use thumbnail method
+image.thumbnail((400, 300))
+image.save('images\\Thumbnail.png', 'png')
