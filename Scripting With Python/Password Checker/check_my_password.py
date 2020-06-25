@@ -17,7 +17,7 @@ def get_password_leaks_count(tail_hash, hashes):
     hashes = (line.split(':') for line in hashes.splitlines())
     for h, count in hashes:
         if h == tail_hash:
-            return count
+            return int(count)
     return 0
 
 
@@ -32,9 +32,12 @@ def main(args):
     for password in args:
         count = check_pwned_api(password)
         if count > 0:
-            print(f'Your {password} was found {count} times.. You should try changing your password.')
+            print(f'Your password {password} was found {count} times.. You should try changing your password.')
         else:
             print(f'Great!! Your password {password} is not hacked')
 
 
-main(sys.argv[1:])
+if __name__ == '__main__':
+    with open('Passwords.txt', 'r') as input_file:
+        inputs = input_file.read().splitlines()
+        main(inputs)
