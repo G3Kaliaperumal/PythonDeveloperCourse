@@ -7,6 +7,9 @@ soup = BeautifulSoup(res.text, 'html.parser')
 links = soup.select('.storylink')
 subtext = soup.select('.subtext')
 
+def sort_stories_by_points(hn_list):
+  return sorted(hn_list, key = lambda k:k['points'], reverse = True)
+
 def create_custom_hacker_news(links, subtext):
   hn = []
   for index, link in enumerate(links):
@@ -17,6 +20,6 @@ def create_custom_hacker_news(links, subtext):
         points = int(vote[0].getText().replace(' points', ''))
         if points > 99:
           hn.append({'title': title, 'link': href, 'points': points})
-  return hn
+  return sort_stories_by_points(hn)
     
 pprint(create_custom_hacker_news(links, subtext))
