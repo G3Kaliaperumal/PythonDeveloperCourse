@@ -7,10 +7,7 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
-@app.route('/')
-def renderHTML():
-    return render_template('index.html')
 
-@app.route('/display')
-def route1():
-    return 'Hello, Route!'
+@app.route('/<username>/<int:post_id>')
+def displayName(username=None, post_id=None):
+    return render_template('index.html', name=username, post_id=post_id)
