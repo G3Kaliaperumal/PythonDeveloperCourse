@@ -4,9 +4,13 @@
 # set FLASK_ENV=development # for debug mode
 # To run the application: use 'flask run'
 
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    return 'Hello, GK!'
+def renderHTML():
+    return render_template('index.html')
+
+@app.route('/display')
+def route1():
+    return 'Hello, Route!'
