@@ -1,4 +1,5 @@
 # Ignore __pycache__ folder and files created by python compiler
 
 /__pycache__
+/Web Development/venv
 *.pyc
