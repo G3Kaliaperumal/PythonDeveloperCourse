@@ -4,6 +4,7 @@
 # set FLASK_ENV=development # for debug mode
 # To run the application: use 'flask run'
 
+import csv
 from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
@@ -26,11 +27,21 @@ def write_to_file(data):
         database.write(f'\n{email}, {subject}, {message}')
 
 
+def write_to_csv(data):
+    with open('database.csv', 'a', newline='') as database_csv:
+        email = data['email']
+        subject = data['subject']
+        message = data['message']
+        csv_writer = csv.writer(
+            database_csv, lineterminator='\n', delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        csv_writer.writerow([email, subject, message])
+
+
 @app.route('/submit_form', methods=['POST', 'GET'])
 def submit_form():
     if request.method == 'POST':
         data = request.form.to_dict()
-        write_to_file(data)
+        write_to_csv(data)
         return redirect('/thankyou.html')
     else:
         return 'Oops! Please try again'
