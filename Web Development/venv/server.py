@@ -16,3 +16,8 @@ def default():
 @app.route('/<string:page_name>')
 def renderPage(page_name):
     return render_template(page_name)
+
+
+@app.route('/submit_form', methods=['POST', 'GET'])
+def submit_form():
+    return 'Form Submitted Successfully!'
