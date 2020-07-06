@@ -4,7 +4,7 @@
 # set FLASK_ENV=development # for debug mode
 # To run the application: use 'flask run'
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
 
@@ -20,4 +20,10 @@ def renderPage(page_name):
 
 @app.route('/submit_form', methods=['POST', 'GET'])
 def submit_form():
-    return 'Form Submitted Successfully!'
+    if request.method == 'POST':
+        data = request.form.to_dict()
+        print(data)
+        return redirect('/thankyou.html')
+    else:
+        return 'Oops! Please try again'
+
