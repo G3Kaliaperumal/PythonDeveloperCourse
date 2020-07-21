@@ -16,3 +16,5 @@ show_msg_button.click()
 
 output_msg = chrome_browser.find_element_by_id('display')
 assert 'Hello!!' in output_msg.text
+
+chrome_browser.quit()
