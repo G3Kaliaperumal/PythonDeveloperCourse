@@ -6,3 +6,4 @@
 /Web Development/venv/Scripts
 /Web Development/venv/pyvenv.cfg
 *.pyc
+*.exe
